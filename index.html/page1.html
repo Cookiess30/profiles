@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibible1" content="IE=egde">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page1.Limbo</title>
+</head>
+<style>
+body,html{
+    height: 80%;
+}
+body{
+    background: rgb(245, 210, 255);
+    font-family: monospace;
+}
+
+h1{
+    border-radius:0;
+    padding-top:15px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+    text-align:center;
+    color:black;
+    background-color: transparent;
+    height: 5%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+    padding-top: 12%;
+}
+ .user-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    border-radius: 10px;
+    padding: 40px;
+    width: 650px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+
+ }
+
+ .user-card::before{
+    position: absolute;
+    content:'';
+    height: 300%;
+    width: 173px;
+    background: rgb(0, 0, 0);
+    top: -60px;
+    left: -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+
+}
+
+.user-card-img{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.user-card-img img{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.user-card-info{
+    text-align: center;
+
+}
+.user-card-info h2{
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+.user-card-info p{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.user-card-info p span{
+    font-weight:700;
+    margin-right: 10px;
+}
+
+.button {
+    border: 2px;
+    color: black;
+    padding: 16px 32px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button {
+    background-color: rgba(184, 184, 184, 0.555); 
+    color: black; 
+    border: 2px solid #000000a8;
+  }
+  
+  .button:hover {
+    background-color: rgb(245, 210, 255);
+    color: black;
+  }
+
+@media only screen and (min-width: 768px){
+    .user-card{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .user-card-img{
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .user-card-info{
+        text-align: left;
+    }
+    
+
+}
+
+@media only screen and (max-width: 767px){
+    .wrapper{
+        padding: 3%;
+    }
+    .user-card::before{
+        width: 300%;
+        height: 200px;
+        transform: rotate(0);
+    }
+    .user-card-info h2{
+    margin-top: 25px;
+    font-size: 25px;
+    }  
+    .user-card-info p span{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px
+
+}
+
+
+    }
+</style>
+<body>
+    <h1>Profile</h1>
+    <div class="wrapper">
+        <div class="user-card">
+            <div class="user-card-img">
+                <img src="img/limbo.jpeg" alt="">
+            </div>
+
+            <div class="user-card-info">
+                <h2>Triscia Nicole J. Limbo</h2>
+                <p><span>Age:</span> 17</p>
+                <p><span>Birthday:</span>November 17,2006</p>
+                <p><span>Gender:</span>Female</p>
+                <p><span>Address:</span> Mandaluyong City</p>
+                <p><span>Gmail:</span> triscianicolelimbo@gmail.com</p>
+                
+        </div>
+    </div>
+
+    <div>
+    <a href="main.index.html">
+        <button class="button" role="button">Back</button>
+         </a>
+</div>
+
+    
+</body>
+</html>
+
+
+
+
